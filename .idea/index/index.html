@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Freifächer</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+<header class="header">
+    <div class="headerElement links">
+        <img src="./img/SVlogo.png" alt="SV-Logo" class="logo"/>
+    </div>
+
+    <div class="headerElement filter">
+        <div>
+            <label htmlFor="abteilung">Abteilung </label>
+            <select id="abteilung" class="select">
+                <option value=""></option>
+                <option value="HIT">HIT</option>
+                <option value="HWI">HWI</option>
+                <option value="HMB">HMB</option>
+                <option value="HKT">HKT</option>
+                <option value="HBG">HBG</option>
+                <option value="HEL">HEL</option>
+                <option value="HET">HET</option>
+            </select>
+        </div>
+        <div>
+            <label htmlFor="jahrgang">Jahrgang </label>
+            <input id="jahrgang" type="number" min="1" max="5" class="input"/>
+        </div>
+        <div>
+            <input id= "suche" type="text" placeholder="Suche"/>
+        </div>
+    </div>
+</header>
+<h1 class="oben">Freigegenstände</h1>
+<div id="dataContainer">
+
+</div>
+</body>
+</html>

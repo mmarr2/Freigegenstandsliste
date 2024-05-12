@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anmelden</title>
+  <link rel="stylesheet" href="anmelden.css">
+  <script src="anmelden.js"></script>
+</head>
+<body>
+<div>
+  
+  <div className="form">
+
+
+    <h1 id="header">Anmelden</h1>
+    <div className="namen">
+      <input type="text" id="vorname" placeholder="Vorname"/>
+      <input type="text" id="nachname" placeholder="Nachname"/>
+    </div>
+    <div className="auswahl">
+      <input type="number" min="1" max="5" id="jahrgang" placeholder="Jahrgang"/>
+      <select id="abteilung">
+        <option value="" disabled selected>Abteilung</option>
+        <option value="HIT">HIT</option>
+        <option value="HWI">HWI</option>
+        <option value="HMB">HMB</option>
+        <option value="HKT">HKT</option>
+        <option value="HBG">HBG</option>
+        <option value="HEL">HEL</option>
+        <option value="HET">HET</option>
+      </select>
+    </div>
+    <input type="email" id="email" placeholder="E-Mail"/>
+    <div id="error"></div>
+    <button id="anmelden" onclick="anmelden()">Anmelden!</button>
+  </div>
+
+</div>
+</body>
+</html>

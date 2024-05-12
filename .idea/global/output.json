@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "abteilung": "HIT",
+    "jahrgang": "1-5",
+    "gegenstand": "Name",
+    "bezeichnung": "K�rzel",
+    "stunden": "1",
+    "email": "leher@tgm.ac.at",
+    "lehrer": "LehrerK�rzel",
+    "beschreibung": "Beschreibung in ganzen S�tzen",
+    "infos": "diese Zeile sind Beispieleintr�ge"
+  },
+  {
+    "id": 1,
+    "abteilung": "HBG,HEL",
+    "jahrgang": "3",
+    "gegenstand": "Cambridge First Certificate",
+    "bezeichnung": "Das ist eine Kurzbeschreibung",
+    "stunden": "3",
+    "email": "lehrer@tgm.ac.at",
+    "lehrer": "VIDM",
+    "beschreibung": "Das ist eine ausf�hrlichere Kursbeschreibung",
+    "infos": "leer"
+  },
+  {
+    "id": 2,
+    "abteilung": "HBG,HEL",
+    "jahrgang": "3",
+    "gegenstand": "Cambridge First Certificate",
+    "bezeichnung": "Das ist eine Kurzbeschreibung",
+    "stunden": "3",
+    "email": "lehrer@tgm.ac.at",
+    "lehrer": "VIDM",
+    "beschreibung": "Das ist eine ausf�hrlichere Kursbeschreibung",
+    "infos": "leer"
+  }
+]

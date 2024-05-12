@@ -1,0 +1,155 @@
+body{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    width: 100%;
+    background-color: #f8f4ed;
+}
+
+#dataContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.gegenstand{
+    width: calc(33.33%);
+
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.subject-card {
+    padding: 10px;
+    margin: 2% 2% 2% 2%;
+    background-color: white;
+    text-decoration: none;
+    border: 0.5px solid #e3e3e3;
+    width: 70%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.subject-card:hover {
+    transform: scale(1.02);
+    transition: transform .2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.subject-card:not(:hover){
+    transform: scale(1);
+    transition: transform .2s ease-in-out;
+}
+.subject-image {
+    width: 280px;
+    height: auto;
+    object-fit: cover;
+    margin: 12% auto;
+    border-radius: 5px;
+}
+
+.subject-image:hover{
+    filter:brightness(95%);
+    transition: ease-in-out;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 0 10%;
+    text-decoration: none;
+    padding: 0 0 0 0;
+    width: 80%;
+    height: 20%;
+
+}
+
+
+.titel{
+    font-size: 140%;
+    font-weight: bold;
+    margin: 0 0 0 0;
+    transition: color ease-in-out;
+}
+
+.titel:hover{
+    color: #01B0F1;
+}
+
+
+.beschreibung{
+    margin: 0 0 6% 10%;
+    width: 80%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.kurz{
+    text-align: left;
+
+}
+
+.fach{
+    width: 70%;
+    height: 100px;
+    margin: 0 0 5% 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.fach h1{
+    margin-top: 15%;
+    font-weight: 550;
+    font-size: 20px;
+    text-align: left;
+}
+
+
+hr{
+    width: 20%;
+    height: 1px;
+    background: #cccccc;
+    opacity: 80%;
+    margin: 2% auto 0% auto;
+    color:#cccccc;
+    border: 0px solid;
+}
+
+.text{
+    text-align: right;
+}
+
+.oben{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oben h1 {
+    font-size: 200px;
+
+}
+
+
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+h1{
+    font-size: 50px;
+}
+

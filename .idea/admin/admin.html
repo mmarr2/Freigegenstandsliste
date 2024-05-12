@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div id="anmelden">
+  <h1>Login</h1>
+
+  <form name="f01" id="f01" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+
+    <input type="text" name="user" placeholder="Benutzername"><br>
+
+    <input type="password" name="pw" placeholder="Passwort"><br>
+
+
+    <button name="sendForm" onclick="submitForm()">Anmelden</button>
+  </form>
+</div>
+</body>
+</html>
