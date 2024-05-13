@@ -27,7 +27,7 @@ if(isset($_POST["user"]) && isset($_POST["pw"]))
 
 
     $login_data[0][0] = "admin";
-    $login_data[0][1] = '$argon2i$v=19$m=16,t=2,p=1$c29tZXNhbHQ$aXNgzetaJlm1oiGsKBzBTQ'; //user: brein pw: Ses4mOe§§n3D!ch?
+    $login_data[0][1] = '$argon2i$v=19$m=16,t=2,p=1$c29tZXNhbHQ$aXNgzetaJlm1oiGsKBzBTQ'; //user: admin pw: Ses4mOe§§n3D!ch?
 
 
 

@@ -1,8 +1,32 @@
 [
     {
-        "id": 1,
+        "id": 0,
         "abteilung": "HIT",
         "jahrgang": "1-5",
+        "gegenstand": "Name",
+        "bezeichnung": "K rzel",
+        "stunden": "1",
+        "email": "leher@tgm.ac.at",
+        "lehrer": "LehrerK\u00fcrzel",
+        "beschreibung": "Beschreibung in ganzen S tzen",
+        "infos": "diese Zeile sind Beispieleintr\u00e4ge"
+    },
+    {
+        "id": 1,
+        "abteilung": "HET",
+        "jahrgang": "2-4",
+        "gegenstand": "Name",
+        "bezeichnung": "K rzel",
+        "stunden": "1",
+        "email": "leher@tgm.ac.at",
+        "lehrer": "LehrerK\u00fcrzel",
+        "beschreibung": "Beschreibung in ganzen S tzen",
+        "infos": "diese Zeile sind Beispieleintr\u00e4ge"
+    },
+    {
+        "id": 2,
+        "abteilung": "HMB",
+        "jahrgang": "3",
         "gegenstand": "Name",
         "bezeichnung": "K rzel",
         "stunden": "1",
