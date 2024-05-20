@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anmeldetext</title>
+    <link rel="icon" type="image/x-icon" href="../global/favicon.ico?v=1.0">
+    <link rel="stylesheet" href="anmeldetext.css?v=1.0.3">
+
+</head>
+<body>
+<header class="header">
+    <div id="alles">
+        <div class="headerElement links">
+            <a href="../index/index.php">
+                <img src="../global/SVlogo.png" alt="SV-Logo" class="logo"/>
+            </a>
+        </div>
+    </div>
+</header>
+    <h1>Anmelden</h1>
+    <div id="info">
+
+    </div>
+    <button onclick="kopieren()">Text in Zwischenablage kopieren</button>
+</body>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    const vorname = urlParams.get('vorname');
+    const nachname = urlParams.get('nachname');
+    const abteilung = urlParams.get('abteilung');
+    const jahrgang = urlParams.get('jahrgang');
+    const email = urlParams.get('email');
+
+    async function getMail(id) {
+        try {
+            const response = await fetch('../global/output.json');
+            const data = await response.json();
+
+            let email = null;
+
+            data.forEach(item => {
+                if (item.id == id) {
+                    email = item.email;
+                }
+            });
+
+            return email;
+        } catch (error) {
+            console.error('Fehler beim Abrufen des Fachs:', error);
+            throw error;
+        }
+    }
+
+    async function getFach(id) {
+        try {
+            const response = await fetch('../global/output.json');
+            const data = await response.json();
+
+            let fach = null;
+
+            data.forEach(item => {
+                if (item.id == id) {
+                    fach = item.gegenstand;
+                }
+            });
+
+            return fach;
+        } catch (error) {
+            console.error('Fehler beim Abrufen des Fachs:', error);
+            throw error;
+        }
+    }
+
+    getFach(id).then(gegenstand =>
+    getMail(id).then(mail =>
+
+        document.getElementById("info").innerHTML =
+                "1. Neue E-Mail erstellen <br>" +
+                "2. <b>Empfänger:</b> " + mail + "<br>" +
+                "3. <b>Betreff:</b> Anmeldung " + gegenstand + "<br>" +
+                "4. <b>Inhalt:</b>  " + vorname + " " + nachname + " aus der Klasse " + jahrgang + "x" + abteilung + " hat sich für das Freifach " + gegenstand+" angemeldet"
+
+    ));
+
+
+    function kopieren(){
+        getFach(id).then(gegenstand =>
+            getMail(id).then(mail =>
+                navigator.clipboard.writeText(vorname + " " + nachname + " aus der Klasse " + jahrgang + "x" + abteilung + " hat sich für das Freifach " + gegenstand+" angemeldet")
+
+            ));
+        alert("Text wurde in Zwischenablage kopiert");
+    }
+</script>
+</html>

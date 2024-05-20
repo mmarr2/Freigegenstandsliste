@@ -1,28 +1,28 @@
 body{
     font-family: "Poppins", sans-serif;
     font-style: normal;
-    width: 100%;
-    background-color: #f8f4ed;
+    width: 98%;
+    background-color: #54b7e6;
+
 }
 
 #dataContainer{
     display: flex;
     justify-content: space-around;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 100%;
 }
 
 .gegenstand{
     width: calc(33.33%);
-
     display: flex;
     justify-content: space-around;
 }
 
 
 .subject-card {
-    padding: 10px;
-    margin: 2% 2% 2% 2%;
+    padding: 5%;
+    margin: 3% 2% 4% 2%;
     background-color: white;
     text-decoration: none;
     border: 0.5px solid #e3e3e3;
@@ -31,15 +31,15 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 5%;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
 }
 
 .subject-card:hover {
     transform: scale(1.02);
     transition: transform .2s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
 }
 
 .subject-card:not(:hover){
@@ -47,7 +47,7 @@ body{
     transition: transform .2s ease-in-out;
 }
 .subject-image {
-    width: 280px;
+    width: calc(100%);
     height: auto;
     object-fit: cover;
     margin: 12% auto;
@@ -64,7 +64,7 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 0 0 0 10%;
+    margin: 0 0 0 0;
     text-decoration: none;
     padding: 0 0 0 0;
     width: 80%;
@@ -100,17 +100,11 @@ body{
 
 .fach{
     width: 70%;
-    height: 100px;
+    height: 50%;
     margin: 0 0 5% 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}
-.fach h1{
-    margin-top: 15%;
-    font-weight: 550;
-    font-size: 20px;
-    text-align: left;
 }
 
 
@@ -150,6 +144,56 @@ hr{
 
 
 h1{
-    font-size: 50px;
+    font-size: 80px;
+    color: white;
 }
+
+@media screen and (max-width: 950px) {
+
+
+    .gegenstand{
+        width: calc(50%);
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .subject-image {
+        width: calc(100%);
+        height: auto;
+        object-fit: cover;
+        margin: 12% auto;
+        border-radius: 5px;
+    }
+
+    h1{
+        font-size: 50px;
+    }
+
+}
+
+@media screen and (max-width: 680px) {
+
+
+    .gegenstand{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .subject-image {
+        width: calc(100%);
+        height: auto;
+        object-fit: cover;
+        margin: 12% auto;
+        border-radius: 5px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+}
+
+
+
 

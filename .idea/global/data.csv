@@ -1,3 +1,7 @@
-Freif cherliste,,,,,,,,
+Freigegenstände,,,,,,,,
 Abteilung,Jahrgang,Freigegenstand,Kurzbezeichnung,Stundenanzahl,Lehrer-Email,Lehrer,Kursbeschreibung,Sonstige Informationens
-HIT,1-5,Name,K rzel,1,leher@tgm.ac.at,LehrerKÃ¼rzel,Beschreibung in ganzen S tzen,diese Zeile sind BeispieleintrÃ¤ge
+HIT,1-5,Robotik,ROB,2,koza@tgm.ac.at,KOZA,Wir machen Roboter,Roboter sind cool
+Alle,1-5,Französisch,FR,1,zini@tgm.ac.at,ZINI,Oui Oui Baguette,Franzosen sind peinlich
+HKT,3-4,3D-Druck,3DD,1,drou@tgm.ac.at,DROU,Cool 3D,Woohoo
+HEL; HET,1-2,Elektrotechnik,ET,2,etel@tgm.ac.at,ETEL,Stromschläge vermeiden lernen,Aua
+HWI,4,Cambridge Certificate,CCE,1,umom@tgm.ac.at,URMO,Werde super in Englisch,Is your English not the yellow of the egg? Then join us!
