@@ -50,7 +50,7 @@
     {
         "id": 4,
         "abteilung": "HWI",
-        "jahrgang": "4",
+        "jahrgang": "4.",
         "gegenstand": "Cambridge Certificate",
         "bezeichnung": "CCE",
         "stunden": "1",
@@ -74,7 +74,7 @@
     {
         "id": 6,
         "abteilung": "HMB; HET",
-        "jahrgang": "2",
+        "jahrgang": "2.",
         "gegenstand": "Automatisierung",
         "bezeichnung": "AUT",
         "stunden": "1",

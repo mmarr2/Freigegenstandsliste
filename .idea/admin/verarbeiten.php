@@ -19,7 +19,18 @@ function parseCSVFile($file_temp_path) {
                     $obj[$keys[$j]] = $id++;
                     $obj[$keys[$j + 1]] = $data[$j];
 
-                } else {
+                } else if($j == 1){
+                    $rowValid = true;
+                    if (!isset($data[$j]) || trim($data[$j]) == "") {
+                        $rowValid = false;
+                    } else {
+                        if(strlen(trim($data[$j])) == 1){
+                            $obj[$keys[$j + 1]] = $data[$j] . ".";
+                        } else {
+                            $obj[$keys[$j + 1]] = $data[$j];
+                        }
+                    }
+                } else{
                     $rowValid = true;
                     if (!isset($data[$j]) || trim($data[$j]) == "") {
                         $rowValid = false;
@@ -47,10 +58,15 @@ function checkEmail($email) {
     return preg_match($regex, $email);
 }
 
+
 function checkJahrgang($jahrgang) {
+
+
     if ($jahrgang == null || $jahrgang == "") return false;
 
-    if (strlen($jahrgang) == 1 && intval($jahrgang) <= 5 && intval($jahrgang) >= 1) return true;
+    if (strlen($jahrgang) == 1 && intval(substr($jahrgang, 0, 1)) <= 5 && intval(substr($jahrgang, 0, 1))) {
+        return true;
+    }
     $grenzen = explode("-", $jahrgang);
     $unten = intval($grenzen[0]);
     $oben = intval($grenzen[1]);
