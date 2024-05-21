@@ -9,24 +9,17 @@ if(isset($_POST["user"]) && isset($_POST["pw"]))
 {
 
 
-    $user 	= $_POST["user"];
-    $pw		= $_POST["pw"];
+    $user = $_POST["user"];
+    $pw	= $_POST["pw"];
 
     $username = "admin";
-    $password = '$argon2i$v=19$m=16,t=2,p=1$YXNkZmdoams$o+/9aR6cgi0Zyev65CJcuw'; //user: admin pw: ABC
-
-
+    $password = '$argon2i$v=19$m=16,t=2,p=1$YXNkZmdoams$o+/9aR6cgi0Zyev65CJcuw'; //pw: ABC
 
     $login = false;
 
-    if($username == $user && password_verify($pw, $password))
-    {
+    if($username == $user && password_verify($pw, $password)) {
         $login = true;
     }
-
-
-
-
 
     if($login){
         ?>
@@ -70,7 +63,6 @@ if(isset($_POST["user"]) && isset($_POST["pw"]))
 
 
 }else{
-    //Formulardaten noch nicht gesetzt, zeige das Formular an
     ?>
     <html>
     <head>
@@ -103,8 +95,7 @@ if(isset($_POST["user"]) && isset($_POST["pw"]))
 
             }
 
-            function submitForm()
-            {
+            function submitForm() {
                 createHash();
 
                 let user = document.f01.user.value;
@@ -117,12 +108,8 @@ if(isset($_POST["user"]) && isset($_POST["pw"]))
                     alert("Passwort und Username stimmen nicht überein");
                 }
 
-
-
             }
-
             }
-
         </script>
 
     </head>

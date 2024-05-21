@@ -5,9 +5,9 @@ function parseCSVFile($file_temp_path) {
     $result = [];
     $id = 0;
     $valid = true;
-    $keys = ["id", "abteilung", "jahrgang", "gegenstand", "bezeichnung", "stunden", "email", "lehrer", "beschreibung", "infos"];
-
-    if (($handle = fopen($file_temp_path, "r")) !== FALSE) {
+    $keys = ["id", "abteilung", "jahrgang", "gegenstand", "bezeichnung", "stunden", "email", "lehrer", "beschreibung", "infos", "pic"];
+    $handle = fopen($file_temp_path, "r");
+    if (!feof($handle)) {
         fgetcsv($handle, 0, ",");
         fgetcsv($handle, 0, ",");
         while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
@@ -47,7 +47,10 @@ function parseCSVFile($file_temp_path) {
             }
         }
 
+
         fclose($handle);
+    } else {
+        echo "Hat nicht funktionert";
     }
 
     return $result;
@@ -60,8 +63,6 @@ function checkEmail($email) {
 
 
 function checkJahrgang($jahrgang) {
-
-
     if ($jahrgang == null || $jahrgang == "") return false;
 
     if (strlen($jahrgang) == 1 && intval(substr($jahrgang, 0, 1)) <= 5 && intval(substr($jahrgang, 0, 1))) {
